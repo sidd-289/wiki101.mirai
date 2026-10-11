@@ -1,0 +1,219 @@
+* {
+    font-family: serif;
+    box-sizing: border-box
+}
+
+body {
+    margin: auto
+}
+
+.layout {
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 60px auto
+}
+
+.topbar {
+    grid-column: 1/11;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.wikilogo {
+    
+    width: 150px;
+    height: 40px;
+    margin-left: 15px
+}
+
+.searchbox {
+    margin-left: auto
+}
+
+.searchbox input {
+    width: 350px;
+    height: 30px;
+    font-size: 13px;
+    border: 1px solid #444
+}
+
+.searchbtn {
+    height: 30px;
+    border: 1px solid #444;
+    background: white
+}
+
+.topbar nav {
+    margin: 0 20px 0 15px;
+    font-size: 15px
+}
+
+.topbar a {
+    color: #0055ff;
+    margin-right: 8px
+}
+
+.menu {
+    grid-column: 1/3;
+    position: sticky;
+    top: 0;
+    height: max-content
+}
+
+.menu h2 {
+    font-size: 18px;
+    margin-left: 15px
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0 15px
+}
+
+.menu li {
+    margin: 8px 0
+}
+
+.menu a {
+    font-size: 17px;
+    color: #0645ad;
+    text-decoration: none
+}
+
+.menu a:hover {
+    text-decoration: underline
+}
+
+.article {
+    grid-column: 3/9;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px 1450px 1000px;
+    gap: 2px
+}
+
+.articlehead {
+    grid-column: 1/4
+}
+
+.subheading {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px
+}
+
+.subheading h1 {
+    font-size: 1.8em;
+    margin: 10px 0
+}
+
+.subheading select {
+    height: 25px;
+    margin-top: 20px
+}
+
+.headline {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    padding: 8px 0
+}
+
+.headline a {
+    margin-right: 10px
+}
+
+.articleimage {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    width: 310px;
+    border: .5px solid grey;
+    padding: 8px
+}
+
+.cityimage {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sagrada_Familia_8-2021.jpg/500px-Sagrada_Familia_8-2021.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 230px
+}
+
+.cityimage2 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Park_Guell_02.jpg/500px-Park_Guell_02.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 180px
+}
+
+.articlebody {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: large;
+    padding-right: 15px
+}
+
+.articlebody h2,
+.articlefoot h2 {
+    font-family: Georgia, serif;
+    font-weight: normal;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px
+}
+
+.articlefoot {
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 200px 230px auto
+}
+
+.picturetext {
+    grid-column: 1/5
+}
+
+.picture {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sagrada_Familia_8-2021.jpg/500px-Sagrada_Familia_8-2021.jpg");
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+.history {
+    grid-column: 2/5;
+    padding-left: 15px
+}
+
+.landmarks {
+    grid-column: 1/5
+}
+
+.rightside {
+    grid-column: 9/11;
+    margin: 5px 0 0 5px;
+    position: sticky;
+    top: 0;
+    background: white
+}
+
+.appearance {
+    margin-top: 30px
+}
+
+.appearance h3 {
+    font-size: 16px
+}
+
+a {
+    color: #0055ff
+}
+
+p {
+    line-height: 1.5
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="384" height="108" viewBox="0 0 384 108" role="img" aria-labelledby="title desc">
+  <title id="title">Wikipedia 25 years logo</title>
+  <desc id="desc">Wikipedia wordmark with a blue 25 years badge and the text 25 years of the free encyclopedia</desc>
+  <rect width="384" height="108" fill="#fff"/>
+  <g fill="#444">
+    <rect x="10" y="42" width="36" height="4"/>
+    <rect x="10" y="55" width="36" height="4"/>
+    <rect x="10" y="68" width="36" height="4"/>
+  </g>
+  <text x="88" y="51" fill="#111" font-family="Georgia, Times New Roman, serif" font-size="45" letter-spacing="-2">WIKIPEDIA</text>
+  <path fill="#1769c2" d="M326 19h33v10h10v33h-10v10h-33V62h-10V29h10z"/>
+  <text x="328" y="52" fill="#fff" font-family="Arial, sans-serif" font-size="22" font-weight="700">25</text>
+  <text x="89" y="88" fill="#444" font-family="Georgia, Times New Roman, serif" font-size="17">25 years of the free encyclopedia</text>
+</svg>
