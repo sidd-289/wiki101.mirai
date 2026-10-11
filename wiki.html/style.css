@@ -1,219 +1,454 @@
 * {
-    font-family: serif;
-    box-sizing: border-box
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
 }
 
 body {
-    margin: auto
+    font-family: Arial, sans-serif;
+    background: #fbf7ef;
+    color: #172033;
+    line-height: 1.5
 }
 
-.layout {
-    display: grid;
-    height: auto;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: 60px auto
-}
-
-.topbar {
-    grid-column: 1/11;
-    height: 60px;
+.site-nav {
+    height: 72px;
+    background: #fbf7ef;
     display: flex;
     align-items: center;
-    background-repeat: no-repeat;
-    background-size: contain
-}
-
-.wikilogo {
-    
-    width: 150px;
-    height: 40px;
-    margin-left: 15px
-}
-
-.searchbox {
-    margin-left: auto
-}
-
-.searchbox input {
-    width: 350px;
-    height: 30px;
-    font-size: 13px;
-    border: 1px solid #444
-}
-
-.searchbtn {
-    height: 30px;
-    border: 1px solid #444;
-    background: white
-}
-
-.topbar nav {
-    margin: 0 20px 0 15px;
-    font-size: 15px
-}
-
-.topbar a {
-    color: #0055ff;
-    margin-right: 8px
-}
-
-.menu {
-    grid-column: 1/3;
-    position: sticky;
+    justify-content: space-between;
+    padding: 0 7%;
+    position: fixed;
     top: 0;
-    height: max-content
+    width: 100%;
+    z-index: 2
 }
 
-.menu h2 {
-    font-size: 18px;
-    margin-left: 15px
+.brand-name {
+    font-size: 25px
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0 15px
+.nav-links {
+    display: flex;
+    gap: 25px
 }
 
-.menu li {
-    margin: 8px 0
-}
-
-.menu a {
-    font-size: 17px;
-    color: #0645ad;
+.nav-links a,
+.hire-link,
+footer a {
+    color: #172033;
     text-decoration: none
 }
 
-.menu a:hover {
-    text-decoration: underline
+.nav-links a:hover {
+    color: #168a89
 }
 
-.article {
-    grid-column: 3/9;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px 1450px 1000px;
-    gap: 2px
+.hire-link,
+.main-button {
+    background: #168a89;
+    color: #fff;
+    padding: 13px 22px;
+    border-radius: 8px;
+    text-decoration: none
 }
 
-.articlehead {
-    grid-column: 1/4
+.hero-section {
+    min-height: 720px;
+    padding: 175px 7% 70px;
+    background: #fbf7ef
 }
 
-.subheading {
+.hero-copy {
+    position: relative
+}
+
+.eyebrow {
+    color: #168a89;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 18px
+}
+
+.hero h1 {
+    font-size: 62px;
+    line-height: 1.08
+}
+
+.hero h1 em {
+    color: #168a89;
+    font-style: normal
+}
+
+.intro {
+    color: #687086;
+    font-size: 19px;
+    max-width: 600px;
+    margin: 24px 0
+}
+
+.hero-actions {
     display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid grey;
-    padding-bottom: 5px
+    gap: 16px
 }
 
-.subheading h1 {
-    font-size: 1.8em;
-    margin: 10px 0
+.outline-button,
+.download-link {
+    border: 1px solid #168a89;
+    color: #168a89;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none
 }
 
-.subheading select {
-    height: 25px;
+.profile-wrap {
+    position: absolute;
+    left: 720px;
+    top: 60px
+}
+
+.profile-photo {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background: #d8eee7 url(mukesh.jpeg) center/cover no-repeat;
+    border: 14px solid #e4f4ed
+}
+
+.experience-chip {
+    display: flex;
+    gap: 8px;
+    background: #fff;
+    padding: 15px 22px;
+    border-radius: 8px;
+    position: absolute;
+    right: -70px;
+    bottom: 5px;
+    box-shadow: 0 8px 20px #1720331c
+}
+
+.experience-chip b {
+    font-size: 25px;
+    color: #168a89
+}
+
+.experience-chip span {
+    color: #687086
+}
+
+.stats-row {
+    display: flex;
+    justify-content: center;
+    background: #172033;
+    color: #fff
+}
+
+.stats-row div {
+    width: 240px;
+    padding: 32px;
+    text-align: center;
+    border-right: 1px solid #ffffff20
+}
+
+.stats-row b {
+    display: block;
+    font-size: 28px
+}
+
+.stats-row span {
+    color: #aab3c2
+}
+
+.about-section,
+.skills-section,
+.projects-section,
+.experience-section {
+    padding: 100px 10%
+}
+
+.about-section h2,
+.skills-section h2,
+.projects-section h2,
+.experience-section h2 {
+    font-size: 40px;
+    margin-bottom: 35px
+}
+
+.about-grid,
+.skill-grid,
+.project-grid {
+    display: flex;
+    gap: 40px
+}
+
+.about-copy {
+    flex: 1;
+    color: #687086;
+    font-size: 18px
+}
+
+.about-copy p {
+    margin-bottom: 18px
+}
+
+.download-link {
+    display: inline-block;
     margin-top: 20px
 }
 
-.headline {
+.details-box {
+    width: 500px;
+    background: #eef7f3;
+    padding: 25px;
+    border-radius: 14px
+}
+
+.details-box p {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid grey;
-    padding: 8px 0
+    padding: 15px 0;
+    border-bottom: 1px solid #d4e5df
 }
 
-.headline a {
-    margin-right: 10px
+.details-box p:last-child {
+    border: 0
 }
 
-.articleimage {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    width: 310px;
-    border: .5px solid grey;
-    padding: 8px
+.details-box span {
+    color: #687086
 }
 
-.cityimage {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sagrada_Familia_8-2021.jpg/500px-Sagrada_Familia_8-2021.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 230px
+.skill-grid {
+    max-width: 900px
 }
 
-.cityimage2 {
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Park_Guell_02.jpg/500px-Park_Guell_02.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 180px
+.skill-list {
+    flex: 1
 }
 
-.articlebody {
-    grid-column: 1/3;
-    grid-row: 2/3;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: large;
-    padding-right: 15px
-}
-
-.articlebody h2,
-.articlefoot h2 {
-    font-family: Georgia, serif;
-    font-weight: normal;
-    border-bottom: 1px solid grey;
-    padding-bottom: 5px
-}
-
-.articlefoot {
-    grid-column: 1/4;
+.skill {
+    margin: 25px 0;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 200px 230px auto
+    grid-template-columns: 1fr auto;
+    gap: 7px
 }
 
-.picturetext {
-    grid-column: 1/5
+.skill span {
+    color: #687086
 }
 
-.picture {
-    grid-column: 1/2;
-    grid-row: 2/3;
-    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Sagrada_Familia_8-2021.jpg/500px-Sagrada_Familia_8-2021.jpg");
-    background-size: contain;
-    background-repeat: no-repeat
+.skill i {
+    grid-column: 1/3;
+    height: 8px;
+    border-radius: 8px;
+    background: #dce8e5;
+    overflow: hidden
 }
 
-.history {
-    grid-column: 2/5;
-    padding-left: 15px
+.skill strong {
+    display: block;
+    height: 100%;
+    background: #168a89
 }
 
-.landmarks {
-    grid-column: 1/5
+.github-area {
+    margin-top: 80px
 }
 
-.rightside {
-    grid-column: 9/11;
-    margin: 5px 0 0 5px;
-    position: sticky;
-    top: 0;
-    background: white
+.github-card {
+    background: #172033;
+    color: #fff;
+    border-radius: 16px;
+    padding: 28px;
+    max-width: 900px
 }
 
-.appearance {
-    margin-top: 30px
+.github-card p {
+    color: #aab3c2
 }
 
-.appearance h3 {
-    font-size: 16px
+.github-card a {
+    color: #9be2d0
 }
 
-a {
-    color: #0055ff
+.project-grid article {
+    flex: 1;
+    background: #fff;
+    border: 1px solid #e3e9e5;
+    border-radius: 16px;
+    padding: 28px
 }
 
-p {
-    line-height: 1.5
+.project-grid small {
+    color: #168a89;
+    text-transform: uppercase;
+    font-weight: bold
+}
+
+.project-grid h3 {
+    font-size: 25px;
+    margin: 18px 0
+}
+
+.project-grid p {
+    color: #687086;
+    min-height: 70px
+}
+
+.project-grid a {
+    color: #172033;
+    font-weight: bold
+}
+
+.experience-section article {
+    display: flex;
+    gap: 50px;
+    padding: 25px 0;
+    border-bottom: 1px solid #dce3df
+}
+
+.experience-section time {
+    color: #168a89;
+    font-weight: bold;
+    min-width: 150px
+}
+
+.experience-section h3 {
+    font-size: 21px
+}
+
+.experience-section h4 {
+    color: #168a89
+}
+
+.experience-section p {
+    color: #687086
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    background: #172033;
+    color: #fff;
+    padding: 80px 10%
+}
+
+.contact-section h2 {
+    font-size: 40px
+}
+
+.contact-section p {
+    color: #c4ceda;
+    margin: 18px 0
+}
+
+.contact-section a {
+    color: #9be2d0
+}
+
+.contact-section form {
+    width: 500px;
+    display: grid;
+    gap: 15px
+}
+
+.contact-section label {
+    color: #c4ceda
+}
+
+.contact-section input,
+.contact-section textarea {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    padding: 12px;
+    border: 1px solid #526176;
+    border-radius: 5px;
+    background: #202d43;
+    color: #fff
+}
+
+.contact-section textarea {
+    height: 100px
+}
+
+.contact-section button {
+    background: #168a89;
+    color: #fff;
+    border: 0;
+    padding: 13px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer
+}
+
+footer {
+    background: #0e1523;
+    color: #fff;
+    padding: 28px 7%;
+    display: flex;
+    align-items: center;
+    gap: 28px
+}
+
+footer p {
+    color: #9da8b7;
+    margin-right: auto
+}
+
+footer a {
+    color: #c4ceda
+}
+
+@media(max-width:800px) {
+    .nav-links {
+        display: none
+    }
+
+    .hero h1 {
+        font-size: 42px
+    }
+
+    .profile-wrap {
+        position: static;
+        margin-top: 45px
+    }
+
+    .about-grid,
+    .skill-grid,
+    .project-grid,
+    .contact-section {
+        display: block
+    }
+
+    .details-box,
+    .contact-section form {
+        width: 100%;
+        margin-top: 30px
+    }
+
+    .experience-section article {
+        display: block
+    }
+
+    .experience-section time {
+        display: block;
+        margin-bottom: 10px
+    }
+
+    .stats-row {
+        flex-wrap: wrap
+    }
+
+    .stats-row div {
+        width: 50%
+    }
+
+    footer {
+        flex-wrap: wrap
+    }
 }
